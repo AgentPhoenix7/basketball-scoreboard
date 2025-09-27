@@ -19,6 +19,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
     padding: 15px 30px;
     box-sizing: border-box;
     position: absolute;
@@ -27,10 +29,14 @@ body {
 }
 
 select {
-    padding: 8px 12px;
+    padding: 6px 12px;
     border-radius: 6px;
     font-size: 16px;
     border: none;
+    outline: none;
+    background: var(--dropdown-bg, #2c2c2c);
+    color: var(--dropdown-text, white);
+    cursor: pointer;
 }
 
 /* Scoreboard wrapper (contains teams + new game button) */
@@ -127,6 +133,10 @@ button:hover {
     background-color: var(--bg);
 }
 .theme-dark .score { color: var(--digit); box-shadow: 0 0 20px var(--digit-glow) inset; }
+.theme-dark select {
+    --dropdown-bg: #2c2c2c;
+    --dropdown-text: white;
+}
 
 /* Green */
 .theme-green {
@@ -143,6 +153,10 @@ button:hover {
     background-color: var(--bg);
 }
 .theme-green .score { color: var(--digit); box-shadow: 0 0 20px var(--digit-glow) inset; }
+.theme-green select {
+    --dropdown-bg: #00695c;
+    --dropdown-text: #a7ffeb;
+}
 
 /* Blue */
 .theme-blue {
@@ -159,6 +173,10 @@ button:hover {
     background-color: var(--bg);
 }
 .theme-blue .score { color: var(--digit); box-shadow: 0 0 20px var(--digit-glow) inset; }
+.theme-blue select {
+    --dropdown-bg: #0d47a1;
+    --dropdown-text: #bbdefb;
+}
 
 /* Purple */
 .theme-purple {
@@ -175,6 +193,10 @@ button:hover {
     background-color: var(--bg);
 }
 .theme-purple .score { color: var(--digit); box-shadow: 0 0 20px var(--digit-glow) inset; }
+.theme-purple select {
+    --dropdown-bg: #4a148c;
+    --dropdown-text: #e1bee7;
+}
 
 /* Red */
 .theme-red {
@@ -191,6 +213,10 @@ button:hover {
     background-color: var(--bg);
 }
 .theme-red .score { color: var(--digit); box-shadow: 0 0 20px var(--digit-glow) inset; }
+.theme-red select {
+    --dropdown-bg: #880e4f;
+    --dropdown-text: #ffc1e3;
+}
 
 /* Orange */
 .theme-orange {
@@ -207,3 +233,7 @@ button:hover {
     background-color: var(--bg);
 }
 .theme-orange .score { color: var(--digit); box-shadow: 0 0 20px var(--digit-glow) inset; }
+.theme-orange select {
+    --dropdown-bg: #e65100;
+    --dropdown-text: #ffe0b2;
+}
