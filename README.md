@@ -35,23 +35,17 @@ This project is based on the [Scrimba Frontend Developer Career Path](https://sc
 <details>
   <summary>Click to view all themes</summary>
 
-**Dark**  
-![dark theme](docs/theme-dark.png)
+<p align="center">
+  <img src="docs/theme-dark.png" alt="Dark theme" width="30%">
+  <img src="docs/theme-green.png" alt="Green theme" width="30%">
+  <img src="docs/theme-blue.png" alt="Blue theme" width="30%">
+</p>
 
-**Green**  
-![green theme](docs/theme-green.png)
-
-**Blue**  
-![blue theme](docs/theme-blue.png)
-
-**Purple**  
-![purple theme](docs/theme-purple.png)
-
-**Red**  
-![red theme](docs/theme-red.png)
-
-**Orange**  
-![orange theme](docs/theme-orange.png)
+<p align="center">
+  <img src="docs/theme-purple.png" alt="Purple theme" width="30%">
+  <img src="docs/theme-red.png" alt="Red theme" width="30%">
+  <img src="docs/theme-orange.png" alt="Orange theme" width="30%">
+</p>
 
 </details>
 
