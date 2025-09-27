@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'CursedTimer';
+    src: url('fonts/CursedTimerUlil.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.3s ease;
+}
+
+/* Top bar */
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: none;
+}
+
+/* Scoreboard wrapper (contains teams + new game button) */
+.scoreboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; /* leave space for top bar */
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    width: 100%;
+}
+
+.team {
+    text-align: center;
+    transition: 0.3s;
+}
+
+h3 {
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.score {
+    font-family: 'CursedTimer', monospace;
+    font-size: 100px;
+    background: #000;
+    padding: 20px 50px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    min-width: 120px;
+}
+
+.leader {
+    border: 4px solid var(--highlight);
+    box-shadow: 0 0 30px var(--highlight-glow);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    background: transparent;
+    border: 2px solid var(--btn-border);
+    color: white;
+    font-size: 18px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: var(--btn-hover);
+    color: var(--btn-text);
+}
+
+.new-game {
+    background: var(--newgame-bg);
+    border-color: var(--newgame-bg);
+    padding: 12px 25px;
+    font-size: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.new-game:hover {
+    background: var(--newgame-hover);
+    color: white;
+}
+
+/* ================= THEMES ================= */
+
+/* Dark */
+.theme-dark {
+    --bg: #1a2247;
+    --digit: #ff2d2d;
+    --digit-glow: #ff2d2d55;
+    --btn-border: #7d8cff;
+    --btn-hover: #7d8cff;
+    --btn-text: #1a2247;
+    --highlight: #ffd700;
+    --highlight-glow: #ffd70088;
+    --newgame-bg: #28a745;
+    --newgame-hover: #1f7a32;
+    background-color: var(--bg);
+}
+.theme-dark .score { color: var(--digit); box-shadow: 0 0 20px var(--digit-glow) inset; }
+
+/* Green */
+.theme-green {
+    --bg: #004d40;
+    --digit: #00e676;
+    --digit-glow: #00e67655;
+    --btn-border: #69f0ae;
+    --btn-hover: #69f0ae;
+    --btn-text: #004d40;
+    --highlight: #aeea00;
+    --highlight-glow: #aeea0088;
+    --newgame-bg: #2e7d32;
+    --newgame-hover: #1b5e20;
+    background-color: var(--bg);
+}
+.theme-green .score { color: var(--digit); box-shadow: 0 0 20px var(--digit-glow) inset; }
+
+/* Blue */
+.theme-blue {
+    --bg: #003c8f;
+    --digit: #00b0ff;
+    --digit-glow: #00b0ff55;
+    --btn-border: #40c4ff;
+    --btn-hover: #40c4ff;
+    --btn-text: #003c8f;
+    --highlight: #ffd700;
+    --highlight-glow: #ffd70088;
+    --newgame-bg: #1976d2;
+    --newgame-hover: #0d47a1;
+    background-color: var(--bg);
+}
+.theme-blue .score { color: var(--digit); box-shadow: 0 0 20px var(--digit-glow) inset; }
+
+/* Purple */
+.theme-purple {
+    --bg: #4a148c;
+    --digit: #ba68c8;
+    --digit-glow: #ba68c855;
+    --btn-border: #ce93d8;
+    --btn-hover: #ce93d8;
+    --btn-text: #4a148c;
+    --highlight: #ffea00;
+    --highlight-glow: #ffea0088;
+    --newgame-bg: #6a1b9a;
+    --newgame-hover: #4a148c;
+    background-color: var(--bg);
+}
+.theme-purple .score { color: var(--digit); box-shadow: 0 0 20px var(--digit-glow) inset; }
+
+/* Red */
+.theme-red {
+    --bg: #880e4f;
+    --digit: #f50057;
+    --digit-glow: #f5005755;
+    --btn-border: #ff4081;
+    --btn-hover: #ff4081;
+    --btn-text: #880e4f;
+    --highlight: #ffd600;
+    --highlight-glow: #ffd60088;
+    --newgame-bg: #c2185b;
+    --newgame-hover: #880e4f;
+    background-color: var(--bg);
+}
+.theme-red .score { color: var(--digit); box-shadow: 0 0 20px var(--digit-glow) inset; }
+
+/* Orange */
+.theme-orange {
+    --bg: #e65100;
+    --digit: #ff9800;
+    --digit-glow: #ff980055;
+    --btn-border: #ffc107;
+    --btn-hover: #ffc107;
+    --btn-text: #e65100;
+    --highlight: #ffff00;
+    --highlight-glow: #ffff0088;
+    --newgame-bg: #ef6c00;
+    --newgame-hover: #e65100;
+    background-color: var(--bg);
+}
+.theme-orange .score { color: var(--digit); box-shadow: 0 0 20px var(--digit-glow) inset; }
